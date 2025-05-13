@@ -9,19 +9,12 @@ public class Program {
     public static void main(String[] args) {
 
         File file = new File("C:\\Users\\Manuela Arruda\\Documents\\Checkout\\REGRA SS.txt");
-        Scanner sc = null;
-        try {
-            sc = new Scanner(file);
+        try (Scanner sc = new Scanner(file)) {
             while(sc.hasNextLine()) {
                 System.out.println(sc.nextLine());
             }
-        }catch(IOException e) {
+        } catch(IOException e) {
             System.out.println("Error :" + e.getMessage());
-        }
-        finally{
-            if (sc != null){
-                sc.close();
-            }
         }
     }
 }
