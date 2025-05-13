@@ -1,0 +1,34 @@
+🔹 Classe File (pacote java.io)
+- Função: Representa um arquivo ou diretório no sistema de arquivos.
+- Uso comum: Criar uma referência a um arquivo para ser usado na leitura ou escrita.
+- Exemplo:
+  File arquivo = new File("caminho/do/arquivo.txt");
+
+🔹 Classe Scanner (pacote java.util)
+- Função: Lê dados de entrada, como texto de um arquivo ou do teclado.
+- Uso comum para leitura de arquivos:
+  Scanner leitor = new Scanner(arquivo);
+  while (leitor.hasNextLine()) {
+      String linha = leitor.nextLine();
+      System.out.println(linha);
+  }
+  leitor.close();
+- Observação: Para usar o Scanner com File, é necessário tratar exceções.
+
+🔹 Classe IOException (pacote java.io)
+- Função: Representa erros de entrada/saída, como problemas ao abrir ou ler arquivos.
+- Uso: Deve ser tratada com try-catch ou lançada com throws.
+- Exemplo:
+  try {
+      File arquivo = new File("dados.txt");
+      Scanner leitor = new Scanner(arquivo);
+      // leitura aqui...
+      leitor.close();
+  } catch (IOException e) {
+      System.out.println("Erro ao ler o arquivo: " + e.getMessage());
+  }
+
+✅ Resumo geral:
+- File: aponta para o arquivo.
+- Scanner: lê o conteúdo linha por linha.
+- IOException: trata possíveis erros de leitura.

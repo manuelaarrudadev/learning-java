@@ -8,7 +8,7 @@ public class Program {
     
     public static void main(String[] args) {
         
-        String path = "C:\\Users\\Manuela Arruda\\Documents\\Checkout\\REGRA SS.txt";
+        String path = "Documentos\\textos\\java_leitura.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
