@@ -1,4 +1,4 @@
-package Arquivos.application;
+package Scanner.application;
 
 import java.io.File;
 import java.io.IOException;
