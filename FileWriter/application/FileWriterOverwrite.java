@@ -8,9 +8,9 @@ public class FileWriterOverwrite {
 
     public static void main(String[] args) {
 
-        String title = "Síntase da utilização do FileWriter e BufferedWriter";
+        String title = "Arquivo criado a partir do FileWriter com BufferedWriter na função de Ovewrite\n";
 
-        String path = "Documentos\\textos\\java_FileWriter";
+        String path = "Documentos\\textos\\Example_FileWriter";
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
             

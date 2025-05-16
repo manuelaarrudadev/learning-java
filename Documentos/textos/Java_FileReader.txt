@@ -1,0 +1,24 @@
+🔹 Classe FileReader (java.io)
+- Função: Lê caracteres de arquivos de forma básica.
+- Leitura feita caractere por caractere.
+- Exemplo de uso:
+  FileReader fr = new FileReader("arquivo.txt");
+
+🔹 Classe BufferedReader (java.io)
+- Função: Envolve um FileReader para leitura mais eficiente, usando buffer.
+- Permite leitura de uma linha inteira com readLine().
+- Exemplo:
+  BufferedReader br = new BufferedReader(new FileReader("arquivo.txt"));
+  String linha = br.readLine();
+  br.close();
+
+✅ Comparativo rápido:
+- FileReader: leitura direta, caractere por caractere.
+- BufferedReader: leitura mais rápida e conveniente, especialmente com readLine().
+
+⚠️ Observações:
+- Sempre feche o BufferedReader com .close() ou use try-with-resources.
+- Ambos podem lançar IOException, por isso é necessário tratar ou declarar.
+
+📝 Dica de uso:
+- BufferedReader é indicado quando for necessário ler linhas completas ou arquivos maiores.

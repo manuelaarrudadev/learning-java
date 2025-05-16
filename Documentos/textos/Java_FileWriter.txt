@@ -1,0 +1,28 @@
+🔹 Classe FileWriter (java.io)
+- Função: Grava caracteres em arquivos.
+- Pode sobrescrever (modo padrão) ou adicionar ao final do arquivo (modo append).
+- Exemplo modo padrão (sobrescreve):
+  FileWriter fw = new FileWriter("arquivo.txt");
+- Exemplo modo append (acrescenta):
+  FileWriter fw = new FileWriter("arquivo.txt", true);
+
+🔹 Classe BufferedWriter (java.io)
+- Função: Envolve um FileWriter para escrita mais eficiente, com uso de buffer.
+- Permite escrita linha por linha com newLine().
+- Exemplo:
+  BufferedWriter bw = new BufferedWriter(new FileWriter("arquivo.txt"));
+  bw.write("Texto de exemplo");
+  bw.newLine();
+  bw.close();
+
+✅ Comparativo rápido:
+- FileWriter: grava direto no arquivo, caractere por caractere.
+- BufferedWriter: grava com performance melhor, usando buffer.
+
+⚠️ Observações:
+- Sempre feche o BufferedWriter com .close() ou use try-with-resources.
+- Ambos podem lançar IOException, por isso precisam de tratamento com try-catch ou throws.
+
+📝 Dica de uso:
+- Use append = true para adicionar texto ao final de arquivos existentes (ex: logs).
+- Use append = false (ou omita o parâmetro) para sobrescrever o conteúdo do arquivo.
